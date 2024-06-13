@@ -3,53 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Bahador Mehrpour - Resume</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body class="light-theme">
-    <header>
-        <button id="theme-toggle">🌞</button>
-    </header>
-    <div class="resume-container">
-        <div class="resume-card">
+<body>
+    <div class="toggle-button">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">🌗</label>
+    </div>
+    <div class="container">
+        <div class="card">
             <div class="front">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                <img src="your-photo-url.jpg" alt="Profile Picture" class="profile-pic">
                 <h1>Amir Bahador Mehrpour</h1>
-                <button class="emoji-button left" id="skills-button">🛠️</button>
-                <button class="emoji-button right" id="about-button">👤</button>
-                <button class="emoji-button bottom" id="toggle-experience">📝</button>
             </div>
-            <div class="back skills-back">
-                <h2>🛠️ Skills</h2>
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>C++</li>
-                    <li>Django</li>
-                    <li>GitHub</li>
-                    <li>Rest API</li>
-                    <li>Docker</li>
-                </ul>
-                <button class="emoji-button" id="back-to-front">🔙</button>
+            <div class="back">
+                <div class="button green" onclick="showSkills()">Skills</div>
+                <div class="button blue" onclick="showExperience()">Experience</div>
+                <div class="button orange" onclick="showInfo()">Info</div>
             </div>
-            <div class="back about-back">
-                <h2>🚀 About Me</h2>
-                <ul>
-                    <li><strong>Name:</strong> Amir Bahador Mehrpour</li>
-                    <li><strong>Role:</strong> IT Infrastructure and Network Consultant</li>
-                    <li><strong>Experience:</strong> 14 years</li>
-                    <li><strong>Location:</strong> [Your Location]</li>
-                </ul>
-                <button class="emoji-button" id="back-to-front-about">🔙</button>
-            </div>
-        </div>
-        <div class="experience">
-            <h2>📝 Work Experience</h2>
-            <p>Details about your work experience go here.</p>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
