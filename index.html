@@ -7,23 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="toggle-button">
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle">🌗</label>
-    </div>
+    <label class="power">
+        <input type="checkbox" onchange="toggleTheme()">
+        <div>
+            <svg viewBox="0 0 44 44">
+                <path d="M22,6 C31,6 38,13 38,22 C38,31 31,38 22,38 C13,38 6,31 6,22 C6,13 13,6 22,6 L22,28" id="path"></path>
+            </svg>
+        </div>
+    </label>
     <div class="container">
         <div class="card">
             <div class="front">
-                <img src="your-photo-url.jpg" alt="Profile Picture" class="profile-pic">
-                <h1>Amir Bahador Mehrpour</h1>
+                <div class="profile">
+                    <img src="https://i.ibb.co/DRbhsMh/banner.jpg" alt="Profile Picture">
+                    <h1>Amir Bahador Mehrpour</h1>
+                </div>
+                <div class="buttons">
+                    <button class="blue" onclick="showSkills()">Skills</button>
+                    <button class="orange" onclick="showInfo()">Info</button>
+                    <button class="purple" onclick="showExperience()">Experience</button>
+                </div>
             </div>
-            <div class="back">
-                <div class="button green" onclick="showSkills()">Skills</div>
-                <div class="button blue" onclick="showExperience()">Experience</div>
-                <div class="button orange" onclick="showInfo()">Info</div>
+            <div class="back skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Server Administration: Expert in Linux and Windows Server management</li>
+                    <li>MikroTik: Proficient in configuring and managing MikroTik devices</li>
+                    <li>Firewall: Skilled in setting up and maintaining various firewalls</li>
+                    <li>Kerio Control: Experienced in deploying and managing Kerio Control for network security</li>
+                </ul>
+                <button onclick="goBack()">Back</button>
+            </div>
+            <div class="back info">
+                <h2>Info</h2>
+                <p>Name: Amir Bahador Mehrpour</p>
+                <p>Title: IT Infrastructure and Network Consultant</p>
+                <p>Experience: 14 years</p>
+                <p>Location: Tehran, Iran</p>
+                <button onclick="goBack()">Back</button>
+            </div>
+            <div class="back experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Achilan Door: IT Consultant (2013 - Now)</li>
+                    <li>Javadi Lab: Network Administrator (2018 - Now)</li>
+                    <li>Pars Oil & Energy (POEC): Network Administrator, Systems Engineer & IT Manager (2018 - Now)</li>
+                    <li>Kian Poulda Sade (KPC): Network Administrator, Systems Engineer & IT Manager (2018 - Now)</li>
+                </ul>
+                <button onclick="goBack()">Back</button>
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
