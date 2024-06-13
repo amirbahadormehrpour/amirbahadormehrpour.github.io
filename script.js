@@ -22,9 +22,18 @@ document.getElementById('toggle-experience').addEventListener('click', function(
     var exp = document.querySelector('.experience');
     if (exp.style.display === 'block') {
         exp.style.display = 'none';
-        this.textContent = 'Show Experience';
+        this.textContent = '📝';
     } else {
         exp.style.display = 'block';
-        this.textContent = 'Hide Experience';
+        this.textContent = '🔽';
+    }
+});
+
+document.getElementById('theme-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+        this.textContent = '🌙';
+    } else {
+        this.textContent = '🌞';
     }
 });
